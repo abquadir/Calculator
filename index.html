@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Calculator</title>
+  </head>
+  <body>
+    <div class="container">
+
+      <form id="myform" name="calc">
+        <input type="text" name="display" id="textfield" /> <br>
+        <input type="button" id="clear" class="color" value="CE" />
+        <input type="button" onclick="calc.display.value+=''" class="color" value="+/-" />
+        <input type="button" onclick="calc.display.value+='%'" class="color" value="%" />
+        <input type="button" onclick="calc.display.value+='/'" class="color" value="&#247"><br>
+        <input type="button" onclick="calc.display.value+='7'" class="white" value="7" />
+        <input type="button" onclick="calc.display.value+='8'" class="white" value="8" />
+        <input type="button" onclick="calc.display.value+='9'" class="white" value="9" />
+        <input type="button" onclick="calc.display.value+='*'" class="color" value="x" /><br>
+        <input type="button" onclick="calc.display.value+='4'" class="white" value="4" />
+        <input type="button" onclick="calc.display.value+='5'" class="white" value="5" />
+        <input type="button" onclick="calc.display.value+='6'" class="white" value="6" />
+        <input type="button" onclick="calc.display.value+='-'" class="color" value="-"><br>
+        <input type="button" onclick="calc.display.value+='1'" class="white" value="1" />
+        <input type="button" onclick="calc.display.value+='2'" class="white" value="2" />
+        <input type="button" onclick="calc.display.value+='3'" class="white" value="3" />
+        <input type="button" onclick="calc.display.value+='+'" class="color" value="+"><br>
+        <input type="button" onclick="calc.display.value+='0'" class="white" value="0" />
+        <input type="button" onclick="calc.display.value+='.'" class="white" value="." />
+        <input type="button"   class="color"  onclick="calc.display.value = calc.display.value.substr(0,calc.display.value.length-1)" value="del" />
+        <input type="button" value="=" onclick="calc.display.value=eval(calc.display.value)"  class="color" value="=">
+      </form>
+    </div>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
